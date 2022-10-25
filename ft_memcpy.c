@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 18:12:35 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/25 14:27:36 by bcastelo         ###   ########.fr       */
+/*   Created: 2022/10/25 18:49:10 by bcastelo          #+#    #+#             */
+/*   Updated: 2022/10/25 19:26:16 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Check if char (unsigned) is a letter or a digit 
-*
-* Returns a nonzero if it is and zero if not
-*
-*/
-int	ft_isalnum(int c)
+/* Copies n bytes from src to dest */
+void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	size_t	i;
+	char	*s;
+	char	*d;
+
+	d = (char *) dest;
+	s = (char *) src;
+	i = 0;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/24 20:19:03 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/10/25 18:55:01 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,9 @@ size_t	ft_strlen(const char *str);
 void	*ft_memset(void *buffer, int c, size_t n);
 
 /* Erases the data in n bytes of buffer */
-void	bzero(void *buffer, size_t n);
+void	ft_bzero(void *buffer, size_t n);
+
+/* Copies n bytes from src to dest */
+void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n);
 
 #endif

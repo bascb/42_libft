@@ -1,7 +1,6 @@
 NAME=libft.a
 CC=gcc
-CFLAGS=-g -Wall -Werror -Wextra
-OBJS=%.o
+CFLAGS=-Wall -Werror -Wextra
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $^
