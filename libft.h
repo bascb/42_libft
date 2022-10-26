@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/25 18:55:01 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/10/26 17:22:30 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,19 @@ void	ft_bzero(void *buffer, size_t n);
 
 /* Copies n bytes from src to dest */
 void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n);
+
+/* Copies n bytes from src to dest */
+void	*ft_memmove(void *dest, const void *src, size_t n);
+
+/* Allocates memory for array of nmemb elements
+* of size bytes and set memory to zero */
+void	*ft_calloc(size_t nmemb, size_t size);
+
+/* Returns a pointer to a new string,
+   duplicated from str */
+char	*ft_strdup(const char *str);
+
+/* Copy str to dest in a safe mode */
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 #endif
