@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:00:14 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/26 18:14:24 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/10/26 21:07:52 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,13 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
 	if (dest_len >= size)
+		return (size + src_len);
+	i = 0;
+	while (i + dest_len + 1 < size && src[i])
+	{
+		dest[i + dest_len] = src[i];
+		i++;
+	}
+	dest[i + dest_len] = '\0';
+	return (dest_len + src_len);
 }

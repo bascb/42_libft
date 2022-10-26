@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/26 17:22:30 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/10/26 19:36:29 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,8 @@ char	*ft_strdup(const char *str);
 
 /* Copy str to dest in a safe mode */
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+
+/* concatenates src to dest in a safe mode */
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
 #endif
