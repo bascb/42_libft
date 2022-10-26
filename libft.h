@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/26 19:36:29 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/10/26 22:42:45 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,11 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 /* concatenates src to dest in a safe mode */
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
+
+/* Returns the uppercase of a lowercase ascii char*/
+int	ft_toupper(int c);
+
+/* Returns the lowercase of a uppercase ascii char*/
+int	ft_tolower(int c);
 
 #endif
