@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 18:00:14 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/27 13:17:33 by bcastelo         ###   ########.fr       */
+/*   Created: 2022/10/27 13:32:22 by bcastelo          #+#    #+#             */
+/*   Updated: 2022/10/27 13:38:07 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* concatenates src to dest in a safe mode */
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+/* Returns a pointer to the last occurence 
+   of char c in string str */
+char	*ft_strrchr(const char *str, int c)
 {
-	size_t	src_len;
-	size_t	dest_len;
 	size_t	i;
+	char	*last;
 
-	src_len = ft_strlen(src);
-	dest_len = ft_strlen(dest);
-	if (dest_len >= size)
-		return (size + src_len);
+	last = NULL;
 	i = 0;
-	while (i + dest_len + 1 < size && src[i])
+	while (i <= ft_strlen(str))
 	{
-		dest[i + dest_len] = src[i];
+		if (str[i] == c)
+			last = (char *) &str[i];
 		i++;
 	}
-	if (i < size)
-		dest[i + dest_len] = '\0';
-	return (dest_len + src_len);
+	return (last);
 }

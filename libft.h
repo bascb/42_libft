@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/26 22:42:45 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/10/27 13:34:40 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,13 @@ int	ft_toupper(int c);
 
 /* Returns the lowercase of a uppercase ascii char*/
 int	ft_tolower(int c);
+
+/* Returns a pointer to the first occurence 
+   of char c in string str */
+char	*ft_strchr(const char *str, int c);
+
+/* Returns a pointer to the last occurence 
+   of char c in string str */
+char	*ft_strrchr(const char *str, int c);
 
 #endif
