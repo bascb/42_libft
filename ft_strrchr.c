@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:32:22 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/27 13:38:07 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/10/28 09:30:42 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@ char	*ft_strrchr(const char *str, int c)
 
 	last = NULL;
 	i = 0;
-	while (i <= ft_strlen(str))
+	while (str[i])
 	{
 		if (str[i] == c)
 			last = (char *) &str[i];
 		i++;
 	}
+	if (c == '\0')
+		last = (char *) &str[i];
 	return (last);
 }

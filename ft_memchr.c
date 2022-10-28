@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 12:23:10 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/28 09:29:41 by bcastelo         ###   ########.fr       */
+/*   Created: 2022/10/28 12:14:13 by bcastelo          #+#    #+#             */
+/*   Updated: 2022/10/28 12:52:26 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Returns a pointer to the first occurence 
-   of char c in string str */
-char	*ft_strchr(const char *str, int c)
+/* Returns the first occurrence of unsigned char c
+   in first n bytes of memory buffer */
+void	*ft_memchr(const void *buffer, int c, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i])
+	while (i < n)
 	{
-		if (str[i] == c)
-			return ((char *) &str[i]);
+		if (*(unsigned char *) buffer == (unsigned char) c)
+			return ((void *) buffer);
+		buffer++;
 		i++;
 	}
-	if (c == '\0')
-		return ((char *) &str[i]);
 	return (NULL);
 }

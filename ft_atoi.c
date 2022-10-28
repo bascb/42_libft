@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 12:23:10 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/28 09:29:41 by bcastelo         ###   ########.fr       */
+/*   Created: 2022/10/28 14:34:33 by bcastelo          #+#    #+#             */
+/*   Updated: 2022/10/28 14:45:49 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Returns a pointer to the first occurence 
-   of char c in string str */
-char	*ft_strchr(const char *str, int c)
+/* Converts the inital part of num_str to int */
+int	ft_atoi(char *num_str)
 {
-	size_t	i;
+	int	i;
+	int	result;
+	int	signal;
 
+	signal = 1;
+	result = 0;
 	i = 0;
-	while (str[i])
+	while (num_str[i] <= 32)
+		i++;
+	if (num_str[i] == '-' || num_str[i] == '+')
 	{
-		if (str[i] == c)
-			return ((char *) &str[i]);
+		if (num_str[i] == '-')
+			signal = -1;
 		i++;
 	}
-	if (c == '\0')
-		return ((char *) &str[i]);
-	return (NULL);
+	while (num_str[i] >= '0' || num_str[i] <= '9')
+	{
+		result = result * 10 + (num_str[i] - '0');
+		i++;
+	}
+	return (result * signal);
 }
