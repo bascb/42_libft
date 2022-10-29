@@ -10,30 +10,36 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <limits.h>
 #include "libft.h"
+#include <stdio.h>
 
 /* Converts the inital part of num_str to int */
 int	ft_atoi(char *num_str)
 {
-	int	i;
-	int	result;
-	int	signal;
+	int				i;
+	unsigned int	result;
+	int				num_signal;
 
-	signal = 1;
+	num_signal = 1;
 	result = 0;
 	i = 0;
-	while (num_str[i] <= 32)
+	while (ft_isspace(num_str[i]))
 		i++;
 	if (num_str[i] == '-' || num_str[i] == '+')
 	{
 		if (num_str[i] == '-')
-			signal = -1;
+			num_signal = -1;
 		i++;
 	}
-	while (num_str[i] >= '0' || num_str[i] <= '9')
+	while (num_str[i] >= '0' && num_str[i] <= '9')
 	{
 		result = result * 10 + (num_str[i] - '0');
 		i++;
 	}
-	return (result * signal);
+	if (num_signal > 0 && result > (unsigned int) INT_MAX)
+		return (INT_MAX);
+	if (num_signal < 0 && result > (unsigned int) INT_MIN * -1)
+		return (INT_MIN);
+	return ((int ) result * num_signal);
 }

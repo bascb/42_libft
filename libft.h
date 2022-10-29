@@ -53,6 +53,10 @@ int		ft_isascii(int c);
 */
 int		ft_isprint(int c);
 
+/* check if c is space: space, 
+	\f, \n, \r, \t or \v */
+int		ft_isspace(int c);
+
 /* Calculates the length of the string str
 *
 * Returns the number of chars in thw string
