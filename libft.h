@@ -131,4 +131,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 /* Join s1 with s2 and returns a pointer to the new string */
 char	*ft_strjoin(char const *s1, char const *s2);
 
+/* Returns a copy of s1, removing chars in set
+	from both ends of s1 */
+char	*ft_strtrim(char const *s1, char const *set);
+
 #endif
