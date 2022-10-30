@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
 #include "libft.h"
-#include <stdio.h>
 
 /* Converts the inital part of num_str to int */
 int	ft_atoi(char *num_str)

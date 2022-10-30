@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <limits.h>
 
 /* Check if char (unsigned) is a letter 
 *
@@ -90,11 +91,11 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 /* concatenates src to dest in a safe mode */
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
-/* Returns the uppercase of a lowercase ascii char*/
-int	ft_toupper(int c);
+/* Returns the uppercase of a lowercase ascii char */
+int		ft_toupper(int c);
 
 /* Returns the lowercase of a uppercase ascii char*/
-int	ft_tolower(int c);
+int		ft_tolower(int c);
 
 /* Returns a pointer to the first occurence 
    of char c in string str */
@@ -106,15 +107,15 @@ char	*ft_strrchr(const char *str, int c);
 
 /* Compares s1 with s2, comparing only the first (at most)
    n bytes of s1 and s2 */
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /* Returns the first occurrence of unsigned char c
    in first n bytes of memory buffer */
-void  *ft_memchr(const void *buffer, int c, size_t n);
+void	*ft_memchr(const void *buffer, int c, size_t n);
 
 /* Compares s1 with s2, comparing only the first (at most)
    n bytes of s1 and s2 */
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /* locates the first occurence  of s2 in s1 
 	returns s2 if s2 exists, NULL if not and
@@ -122,6 +123,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 
 /* Converts the inital part of num_str to int */
-int	ft_atoi(char *num_str);
+int		ft_atoi(char *num_str);
+
+/* Creates a new string with a copy from start to, at most len */
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+/* Join s1 with s2 and returns a pointer to the new string */
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
