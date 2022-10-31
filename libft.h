@@ -143,4 +143,10 @@ char	**ft_split(char const *s, char c);
 /* Returns a string representing the integer n */
 char	*ft_itoa(int n);
 
+/* Applies the function ´f´ to each character of the string ´s´ */
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+/* Applies the function 'f' on each char of string s */
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
 #endif
