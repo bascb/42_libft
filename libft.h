@@ -168,4 +168,7 @@ void	ft_putendl_fd(char *s, int fd);
 /* Outputs the integer n to given fd */
 void	ft_putnbr_fd(int n, int fd);
 
+/* Allocates and returns a new node */
+t_list	*ft_lstnew(void *content);
+
 #endif
