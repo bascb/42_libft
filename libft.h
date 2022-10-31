@@ -17,6 +17,12 @@
 # include <unistd.h>
 # include <limits.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 /* Check if char (unsigned) is a letter 
 *
 * Returns a nonzero if it is a letter, and zero if not
