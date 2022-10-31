@@ -135,4 +135,12 @@ char	*ft_strjoin(char const *s1, char const *s2);
 	from both ends of s1 */
 char	*ft_strtrim(char const *s1, char const *set);
 
+/* Returns an array of strings obtained by
+	by splitting 's' using the char 'c' 
+	as delimiter */
+char	**ft_split(char const *s, char c);
+
+/* Returns a string representing the integer n */
+char	*ft_itoa(int n);
+
 #endif

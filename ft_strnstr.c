@@ -17,25 +17,27 @@
 	s1 if n is 0 */
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	size_t	s2_len;
+	const char	*main;
+	const char	*sub;
+	size_t		count;
 
-	s2_len = ft_strlen(s2);
-	if (!s2_len)
+	if (!s2)
 		return ((char *) s1);
-	if (s2_len > n)
-		return (NULL);
-	i = 0;
-	while (i < n && s1[i])
+	while (*s1 && n)
 	{
-		if (s1[i] == s2[0])
+		main = s1;
+		sub = s2;
+		count = n;
+		while (*main && *main == *sub && count)
 		{
-			if (n - i < s2_len)
-				return (NULL);
-			if (!ft_strncmp(&s1[i], s2, s2_len))
-				return ((char *) &s1[i]);
-		}		
-		i++;
+			main++;
+			sub++;
+			count--;
+		}
+		if (!*sub)
+			return ((char *) s1);
+		s1++;
+		n--;
 	}
 	return (NULL);
 }
