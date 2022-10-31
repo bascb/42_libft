@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 # include <limits.h>
 
 /* Check if char (unsigned) is a letter 
@@ -148,5 +149,17 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /* Applies the function 'f' on each char of string s */
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+/* Outputs the char 'c' to given fd */
+void	ft_putchar_fd(char c, int fd);
+
+/* Outputs string s to given fd */
+void	ft_putstr_fd(char *s, int fd);
+
+/* Outputs string s to given fd followed by a newline */
+void	ft_putendl_fd(char *s, int fd);
+
+/* Outputs the integer n to given fd */
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
