@@ -171,4 +171,13 @@ void	ft_putnbr_fd(int n, int fd);
 /* Allocates and returns a new node */
 t_list	*ft_lstnew(void *content);
 
+/* Adds the node new at the begining of the list */
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+/* Counts the number of nodes in list */
+int	ft_lstsize(t_list *lst);
+
+/* Returns the last node of the list */
+t_list	*ft_lstlast(t_list *lst);
+
 #endif
