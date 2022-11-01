@@ -183,4 +183,7 @@ t_list	*ft_lstlast(t_list *lst);
 /* Add the new node at the end of list */
 void	ft_lstadd_back(t_list **lst, t_list *new);
 
+/* Removes a node from list */
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+
 #endif
