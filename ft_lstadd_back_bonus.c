@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcastelo <bcastelo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/01 18:16:43 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/11/01 18:16:47 by bcastelo         ###   ########.fr       */
+/*   Created: 2022/11/01 20:01:02 by bcastelo          #+#    #+#             */
+/*   Updated: 2022/11/01 20:01:05 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Counts the number of nodes in list */
-int	ft_lstsize(t_list *lst)
+/* Add the new node at the end of list */
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int		count;
-	t_list	*next;
+	t_list	*aux;
 
-	count = 0;
-	next = lst;
-	while (next)
+	if (!lst)
+		return ;
+	if (!*lst)
 	{
-		count++;
-		next = next->next;
+		*lst = new;
+		return ;
 	}
-	return (count);
+	aux = *lst;
+	while (aux->next)
+		aux = aux->next;
+	aux->next = new;
 }

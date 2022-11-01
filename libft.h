@@ -175,9 +175,12 @@ t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 
 /* Counts the number of nodes in list */
-int	ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst);
 
 /* Returns the last node of the list */
 t_list	*ft_lstlast(t_list *lst);
+
+/* Add the new node at the end of list */
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 #endif
