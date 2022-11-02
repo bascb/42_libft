@@ -14,13 +14,10 @@ BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back\
 
 all: $(NAME)
 
-#%.o: %.c
-#	$(CC) -c $(CFLAGS) $^
-
 $(NAME): $(SRC:=.o)
 	ar rcs $(NAME) $^
 
-.PHONY: clean fclean re all
+.PHONY: clean fclean re all bonus
 
 bonus:  $(BONUS:=.o) $(NAME)
 	ar rcs $(NAME) $(BONUS:=.o)
