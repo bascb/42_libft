@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 13:39:05 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/28 14:24:50 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/02 21:06:21 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	const char	*sub;
 	size_t		count;
 
-	if (!s2)
+	if ((!ft_strlen(s2)))
 		return ((char *) s1);
 	while (*s1 && n)
 	{

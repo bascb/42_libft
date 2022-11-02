@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 13:53:55 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/11/02 16:41:21 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/02 17:23:07 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
 	t_list	*node;
-	
+
 	if (!lst)
 		return (NULL);
 	new = NULL;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bcastelo <bcastelo@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 14:50:15 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/31 14:50:19 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:27:28 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,23 @@ static void	ft_itoa_r(unsigned int n, char *number)
 	ft_putdigit(number, n % 10 + '0');
 }
 
+static char	*ft_custom_str(char *number)
+{
+	char	*new;
+
+	new = ft_strdup(number);
+	if (!new)
+		return (number);
+	free(number);
+	return (new);
+}
+
 /* Returns a string representing the integer n */
 char	*ft_itoa(int n)
 {
 	char	*number;
 
-	number = ft_calloc(12, sizeof(char));
+	number = ft_calloc(20, sizeof(char));
 	if (!number)
 		return (NULL);
 	if (n < 0)
@@ -42,5 +53,5 @@ char	*ft_itoa(int n)
 	}
 	else
 		ft_itoa_r(n, number);
-	return (number);
+	return (ft_custom_str(number));
 }

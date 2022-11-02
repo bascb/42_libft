@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 11:19:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/26 14:40:14 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/02 18:44:54 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	if (!nmemb || !size)
 		return (ptr);
-	ft_memset(ptr, 0, nmemb);
+	ft_memset(ptr, 0, nmemb * size);
 	return (ptr);
 }

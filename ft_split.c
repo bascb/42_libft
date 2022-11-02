@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bcastelo <bcastelo@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 08:50:09 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/31 08:50:16 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:17:07 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	j = 0;
 	m = 0;
-	while (*s == c)
+	while (*s && *s == c)
 		s++;
 	while (*s)
 	{

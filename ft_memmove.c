@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 10:26:33 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/26 11:41:40 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/02 17:58:00 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,19 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*s;
 	char	*d;
 
+	if (!dest && !src)
+		return (NULL);
 	array = ft_calloc(n, sizeof(char));
 	if (!array)
 		return (dest);
-	i = 0;
+	i = -1;
 	s = (char *) src;
-	while (i < n)
-	{
+	while (++i < n)
 		array[i] = s[i];
-		i++;
-	}
-	i = 0;
+	i = -1;
 	d = (char *) dest;
-	while (i < n)
-	{
+	while (++i < n)
 		d[i] = array[i];
-		i++;
-	}
 	free(array);
 	return (dest);
 }

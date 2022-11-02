@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/11/02 16:45:36 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/02 20:08:49 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	*ft_memset(void *buffer, int c, size_t n);
 void	ft_bzero(void *buffer, size_t n);
 
 /* Copies n bytes from src to dest */
-void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 /* Copies n bytes from src to dest */
 void	*ft_memmove(void *dest, const void *src, size_t n);
@@ -126,7 +126,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 
 /* Converts the inital part of num_str to int */
-int		ft_atoi(char *num_str);
+int		ft_atoi(const char *num_str);
 
 /* Creates a new string with a copy from start to, at most len */
 char	*ft_substr(char const *s, unsigned int start, size_t len);

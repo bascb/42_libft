@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 13:07:57 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/28 13:26:29 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/02 17:29:17 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	c1 = (unsigned char *) s1;
 	c2 = (unsigned char *) s2;
 	i = 0;
-	while (i < n && c1[i] && c1[i] == c2[i])
+	while (i < n && c1[i] == c2[i])
 		i++;
 	if (i == n)
 		return (0);

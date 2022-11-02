@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 14:34:33 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/11/02 16:44:01 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/02 20:09:04 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	ft_isspace(int c)
 }
 
 /* Converts the inital part of num_str to int */
-int	ft_atoi(char *num_str)
+int	ft_atoi(const char *num_str)
 {
 	int				i;
 	unsigned int	result;
