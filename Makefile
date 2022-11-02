@@ -1,12 +1,12 @@
-NAME=libft.a
-CC=gcc
-CFLAGS=-Wall -Werror -Wextra
+NAME = libft.a
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $^
 
 $(NAME): *.o
-	ar cr $(NAME) $^
+	ar rcs $(NAME) $^
 
 all: $(NAME)
 

@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bcastelo <bcastelo@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 14:36:46 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/29 14:37:10 by bcastelo         ###   ########.fr       */
+/*   Created: 2022/11/02 12:54:25 by bcastelo          #+#    #+#             */
+/*   Updated: 2022/11/02 13:39:41 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* check if c is space: space, 
-	\f, \n, \r, \t or \v */
-int	ft_isspace(int c)
+/* Iterates the list and applies function f to all nodes */
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	return (c == 32 || (c > 8 && c < 14));
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

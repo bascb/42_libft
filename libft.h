@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/10/28 14:44:44 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/02 16:45:36 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,6 @@ int		ft_isascii(int c);
 *
 */
 int		ft_isprint(int c);
-
-/* check if c is space: space, 
-	\f, \n, \r, \t or \v */
-int		ft_isspace(int c);
 
 /* Calculates the length of the string str
 *
@@ -185,5 +181,16 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 
 /* Removes a node from list */
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
+
+/* Deletes and frees the given node and every sucessor */
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+
+/* Iterates the list and applies function f to all nodes */
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+/* Applies function f to all nodes of list 
+	and creates a new list resulting of the application
+	of function f */
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
