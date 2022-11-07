@@ -108,6 +108,10 @@ char	*ft_strchr(const char *str, int c);
    of char c in string str */
 char	*ft_strrchr(const char *str, int c);
 
+/* Counts the number of occurences 
+   of char c in string str */
+int		ft_strcntchr(char *str, int c);
+
 /* Compares s1 with s2, comparing only the first (at most)
    n bytes of s1 and s2 */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
