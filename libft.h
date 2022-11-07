@@ -197,4 +197,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 	of function f */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
+/* Check if char c belongs to charset 
+	Returns 1 if true and 0 if false */
+int		ft_charinset(int c, char *charset);
+
 #endif

@@ -6,7 +6,7 @@ SRC = ft_memset ft_bzero ft_memcpy ft_memmove ft_memchr\
 	ft_substr ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd\
 	ft_strnstr ft_strncmp ft_atoi ft_isalpha ft_isdigit ft_isalnum\
 	ft_isascii ft_isprint ft_toupper ft_tolower ft_calloc ft_strdup\
-	ft_strjoin ft_strtrim ft_strmapi ft_striteri ft_itoa ft_split 
+	ft_strjoin ft_strtrim ft_strmapi ft_striteri ft_itoa ft_split ft_charinset
 	
 BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back\
 		ft_lstdelone ft_lstclear ft_lstiter ft_lstmap
