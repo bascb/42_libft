@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/11/02 20:08:49 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/10 22:08:28 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -167,6 +167,23 @@ void	ft_putendl_fd(char *s, int fd);
 
 /* Outputs the integer n to given fd */
 void	ft_putnbr_fd(int n, int fd);
+
+/* Converts the integer to base and outputs it to given fd 
+	base must:
+	- Be printable 
+	- Do not have repeated chars 
+	- Have at least a size of 2 */
+void	ft_putnbr_base_fd(int n, char *base, int fd);
+
+/* Outputs the unsigned int n to given fd */
+void	ft_putunsigned_fd(unsigned int n, int fd);
+
+/* Converts the unsigned integer to base and outputs it to given fd 
+	base must:
+	- Be printable 
+	- Do not have repeated chars 
+	- Have at least a size of 2 */
+void	ft_putunsigned_base_fd(unsigned int n, char *base, int fd);
 
 /* Allocates and returns a new node */
 t_list	*ft_lstnew(void *content);
