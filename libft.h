@@ -150,6 +150,23 @@ char	**ft_split(char const *s, char c);
 /* Returns a string representing the integer n */
 char	*ft_itoa(int n);
 
+/* Returns a string representing the integer n in base base 
+	base must:
+	- Be printable 
+	- Do not have repeated chars 
+	- Have at least a size of 2 */
+char	*ft_itoa_base(int n, char *base);
+
+/* Returns a string representing the unsigned integer n */
+char	*ft_utoa(int n);
+
+/* Returns a string representing the unsigned integer n in base base 
+	base must:
+	- Be printable 
+	- Do not have repeated chars 
+	- Have at least a size of 2 */
+char	*ft_utoa_base(int n, char *base);
+
 /* Applies the function ´f´ to each character of the string ´s´ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
