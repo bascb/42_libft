@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/11/10 22:08:28 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:15:35 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -166,6 +167,13 @@ char	*ft_utoa(int n);
 	- Do not have repeated chars 
 	- Have at least a size of 2 */
 char	*ft_utoa_base(int n, char *base);
+
+/* Returns a string representing the unsigned long integer n in base base 
+	base must:
+	- Be printable 
+	- Do not have repeated chars 
+	- Have at least a size of 2 */
+char	*ft_ultoa_base(unsigned long int n, char *base);
 
 /* Applies the function ´f´ to each character of the string ´s´ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
