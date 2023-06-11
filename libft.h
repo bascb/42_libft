@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: bcastelo <bcastelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/11/14 18:15:35 by bcastelo         ###   ########.fr       */
+/*   Updated: 2023/06/11 17:56:44 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,20 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct s_flags
+{
+	int				plus;
+	int				space;
+	int				cardinal;
+	int				minus;
+	int				zero;
+	int				width;
+	int				precision_flag;
+	int				precision;
+	int				length;
+}					t_flags;
+
 
 /* Check if char (unsigned) is a letter 
 *
@@ -242,5 +256,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 /* Check if char c belongs to charset 
 	Returns 1 if true and 0 if false */
 int		ft_charinset(int c, char *charset);
+
+/* Recreation of printf by 42 */
+int	ft_printf(const char *format, ...)
+	__attribute__((format(printf, 1, 2)));
 
 #endif
