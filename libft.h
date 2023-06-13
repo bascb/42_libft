@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/11/14 18:15:35 by bcastelo         ###   ########.fr       */
+/*   Updated: 2022/11/22 13:41:17 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,8 +184,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 /* Outputs the char 'c' to given fd */
 void	ft_putchar_fd(char c, int fd);
 
-/* Outputs string s to given fd */
-void	ft_putstr_fd(char *s, int fd);
+/* Outputs string s to given fd */ft_putstr_fd(char *s, int fd);
+void	
 
 /* Outputs string s to given fd followed by a newline */
 void	ft_putendl_fd(char *s, int fd);
