@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:03:51 by bcastelo          #+#    #+#             */
-/*   Updated: 2022/11/22 13:41:17 by bcastelo         ###   ########.fr       */
+/*   Updated: 2023/06/13 15:39:33 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,19 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct s_flags
+{
+	int				plus;
+	int				space;
+	int				cardinal;
+	int				minus;
+	int				zero;
+	int				width;
+	int				precision_flag;
+	int				precision;
+	int				length;
+}					t_flags;
 
 /* Check if char (unsigned) is a letter 
 *
@@ -243,4 +256,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 	Returns 1 if true and 0 if false */
 int		ft_charinset(int c, char *charset);
 
+/* Recreation of printf by 42 */
+int		ft_printf(const char *format, ...)
+		__attribute__((format(printf, 1, 2)));
 #endif
